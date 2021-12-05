@@ -4,7 +4,7 @@ const multer = require('multer');
 
 const storage = multer.diskStorage({
     destination: function (req, file, callback) {
-        callback(null, path.join(__dirname,'../uploads'))
+        callback(null, path.join(__dirname,'../gallery'))
     },
     filename: function (req, file, callback) {
       const uniquePrefix = Date.now() + '-' + Math.round(Math.random() * 1E9)
